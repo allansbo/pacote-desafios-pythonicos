@@ -11,9 +11,22 @@ Dica: Isso pode ser resolvido criando 2 listas e ordenando cada uma
 antes de combina-las.
 """
 
+
 def front_x(words):
-    # +++ SUA SOLUÇÃO +++
-    return
+    new_list = []
+    words.sort()  # Ordena a lista recebida em ordem alfabética
+
+    # Verifica se a palavra começa com a letra 'X' e então copia para new_list
+    for word in words:
+        if word[0] == 'x':
+            new_list.append(word)
+
+    # Verica se a palavra não existe em new_list e então copia
+    for word in words:
+        if word not in new_list:
+            new_list.append(word)
+
+    return new_list
 
 
 # --- Daqui para baixo são apenas códigos auxiliáries de teste. ---
